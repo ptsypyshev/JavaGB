@@ -5,6 +5,12 @@ import java.util.regex.Pattern;
 import java.util.Scanner;
 
 public class Task04 {
+    /**
+    * Returns array with possible numbers. 
+    *
+    * @param  s     the string with "?" sign
+    * @return       the array with possible numbers (int[])
+    */
     public static int[] getNumbers(String s) {
         int[] numbers = new int[10];
         for (int i = 0; i < 10; i++) {
@@ -15,6 +21,12 @@ public class Task04 {
         return numbers;
     }
 
+    /**
+    * Returns restored statement or failure message. 
+    *
+    * @param  s     the statement string with "?" signs at operands
+    * @return       the restored statement or failure message (String)
+    */
     public static String restoreStatement(String s) {
         String[] splittedLine = new String[3];
         int idx = 0;
