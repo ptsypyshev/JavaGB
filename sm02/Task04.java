@@ -1,4 +1,4 @@
-package sm_02;
+package sm02;
 
 import java.io.File;
 import java.io.FileWriter;
