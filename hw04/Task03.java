@@ -145,24 +145,4 @@ public class Task03 {
             System.out.printf("Результат = %s\n", results.peekFirst());
         }  
     }
-
-    /**
-    * Checks if 'exit' command is retrieved
-    *
-    * @param  op    the operation from user inpub
-    * @return       the result of checking
-    */
-    public static boolean isExit(String op) {
-        return op.equals("exit");
-    }
-
-    /**
-    * Checks if 'revert' command is retrieved
-    *
-    * @param  op    the operation from user inpub
-    * @return       the result of checking
-    */
-    public static boolean isRevert(String op) {
-        return op.equals("revert");
-    }
 }
