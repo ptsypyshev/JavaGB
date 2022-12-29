@@ -9,6 +9,10 @@ public class Task02 {
         printLaptops(laptops);
     }
 
+    /** Creates a set of Laptops.
+    * @param listSize   a set size
+    * @return           a set of Laptop Objects
+    */
     public static Set<Laptop> getLaptopSet(int listSize) {
         Set<Laptop> laptops = new HashSet<>();
         for (int i = 0; i < listSize; i++) {
@@ -17,6 +21,9 @@ public class Task02 {
         return laptops;
     }
 
+    /** Prints to a console a set of Laptops.
+    * @param laptops    a set of Laptops
+    */
     public static void printLaptops(Set<Laptop> laptops) {
         System.out.println(resultMsg);
         int i = 1;

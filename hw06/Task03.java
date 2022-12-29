@@ -20,6 +20,10 @@ public class Task03 {
         iScanner.close();
     }
     
+    /** Adds a filter to the Map of filters.
+    * @param iScanner   a Scanner object (used to read from console)
+    * @param filters    a map of filters
+    */
     private static void addFilters(Scanner iScanner, Map<Integer, String> filters) {
         String isAddFilter;
         while (true) {
@@ -30,13 +34,12 @@ public class Task03 {
             String filterValue = getFilterValue(iScanner);
             filters.put(filterType, filterValue);
         }
-    }
+    }    
 
-    private static String getFilterValue(Scanner iScanner) {
-        System.out.print(askFilterValueMsg);
-        return iScanner.next();
-    }
-
+    /** Gets a filter type from user's input.
+    * @param iScanner   a Scanner object (used to read from console)
+    * @return           a filter type
+    */
     public static int getFilterType(Scanner iScanner) {
         System.out.print(askFilterMsg);
         boolean isInt = iScanner.hasNextInt();
@@ -53,6 +56,20 @@ public class Task03 {
         return filterType;
     }
 
+    /** Gets a filter value from user's input.
+    * @param iScanner   a Scanner object (used to read from console)
+    * @return           a filter value
+    */
+    private static String getFilterValue(Scanner iScanner) {
+        System.out.print(askFilterValueMsg);
+        return iScanner.next();
+    }
+
+    /** Filters some Laptop objects from original set due to the map of filters.
+    * @param laptops    a set of Laptop Objects
+    * @param filters    a map of filters
+    * @return           a filtered set of Laptop Objects
+    */
     public static Set<Laptop> filter(Set<Laptop> laptops, Map<Integer, String> filters) {
         if (filters.size() == 0) return laptops;
 
@@ -75,8 +92,7 @@ public class Task03 {
                             if (!laptop.hasMoreOrEqualsCores(cores)) {
                                 result.remove(laptop);
                             }
-                        } 
-                        
+                        }
                         break;
                     case 3:
                         int minRAM = Integer.parseInt(filterValue);
